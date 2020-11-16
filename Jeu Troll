@@ -1,0 +1,17 @@
+import random
+
+# Cette version ressemble comme deux gouttes
+#  d'eau aux précédentes version, si ce n'est
+#  qu'elle réponds n'importe quoi et qu'il est 
+# impossible de gagner
+
+def jeu():
+  print("J'ai choisi un nombre entier compris entre 1 et 100. Vous devez le deviner ")
+  while True:
+    i = input("proposez un nombre : ")
+    if random.randint(1, 2) == 1:
+      print(i, " est trop grand")
+    else:
+      print(i, " est trop petit")
+
+jeu()
