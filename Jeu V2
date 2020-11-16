@@ -1,0 +1,24 @@
+import random
+
+def jeu():
+  N = 1000
+  n = 0
+  x = random.randint(1, N+1)
+  g = -1
+  print("J'ai choisi un nombre entier compris entre 1 et ", N, ". Vous devez le deviner ")
+  while x != g:
+    g = -1
+    while g == -1:
+      i = input("proposez un nombre : ")
+      n = n + 1
+      try:
+        g = int(i)
+      except:
+        print(i, " n'est pas un nombre entier !")
+    if g > x:
+      print(g, " est trop grand")
+    if g < x:
+      print(g, " est trop petit")
+  print("bravo !!! Vous avez trouvé en ", n, " essai(s)")
+
+jeu()
